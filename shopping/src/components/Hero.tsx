@@ -9,8 +9,8 @@ const Hero = () => {
     const settings ={
         dots: true,
         infinite: true,
-        SlidesToShow: 1,
-        SlidesToScroll: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         autoplay: true,
         pauseOnHover: false,
     };
@@ -25,14 +25,14 @@ const Hero = () => {
     },
     {
         id: 1,
-        img: "/Banner2.png.avif",
+        img: "/banner2.png.avif",
         title: "Trending Accessories",
         mainTitle: "MODERN SUNGLASSES",
         price: "$15",
     },
     {
         id: 2,
-        img: "/Banner3.png.webp",
+        img: "/banner3.png.webp",
         title: "Sale Offer",
         mainTitle: "NEW FASHION SUMMER SALE",
         price: "$30",
