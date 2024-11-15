@@ -1,8 +1,10 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Slider from "react-slick";
 import Slide from './Slide';
+
+
 
 const Hero = () => {
 
@@ -15,7 +17,7 @@ const Hero = () => {
         pauseOnHover: false,
     };
 
-    const slideData = [
+    const slideData = [ 
         {
         id: 0,
         img: "/banner1.png.jpg",
@@ -41,7 +43,7 @@ const Hero = () => {
 
   return (
     <div>
-        <div className='container pt-6 lg:pt-0'>
+        <div className='container pt-6 lg:pt-0' >
             <Slider {...settings}>
                 {slideData.map((item) => (
                 <Slide key={item.id}

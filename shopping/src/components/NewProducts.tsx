@@ -2,7 +2,7 @@ import React from 'react'
 import ProductCard from './ProductCard';
 
 const productsData = [
-    {
+    { 
         img: "/jacket.png.jfif",
         title: "Jacket",
         desc: "Men Full Zip Jacket",
@@ -65,11 +65,11 @@ const productsData = [
 const NewProducts = () => {
   return (
     <div>
-      <div className='container pt-16'>
-        <h2 className='font-medium text-2xl pb-4'>New Products</h2>
+      <div className='container pt-16' data-aos="zoom-out-left" data-aos-duration="1000">
+        <h2 className='font-medium text-2xl pb-4 data-aos="zoom-out-left" data-aos-duration="1000"'>New Products</h2>
 
         <div className='grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-col-3 xl:grid-col-4
-        gap-10 xl:gap-x-20 xl:gap-y-10'>
+        gap-10 xl:gap-x-20 xl:gap-y-10' data-aos="zoom-out-left" data-aos-duration="1000">
 
 {productsData.map((item, index) =>(<ProductCard key={index}
                 img={item.img}
