@@ -1,17 +1,15 @@
-"use client"; 
+"use client";
 
-import Hero from '@/components/Hero'
-import NewProducts from '@/components/NewProducts'
-import Testmonial from '@/components/Testmonial'
-
-//AOS
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
+
+import Hero from "@/components/Hero";
+import NewProducts from "@/components/NewProducts";
+import Testmonial from "@/components/Testmonial";
 
 const Shoppingpage = () => {
-
-  useEffect (() => {
+  useEffect(() => {
     AOS.init({
       easing: "ease-out-back",
       duration: 1200,
@@ -20,8 +18,12 @@ const Shoppingpage = () => {
       anchorPlacement: "bottom-bottom",
       offset: 160,
     });
-    AOS.refresh()
-  }, [])
+
+    // Cleanup function to refresh AOS when the component unmounts
+    return () => {
+      AOS.refresh();
+    };
+  }, []);
 
   return (
     <main>
@@ -29,7 +31,7 @@ const Shoppingpage = () => {
       <NewProducts />
       <Testmonial />
     </main>
-  )
-}
+  );
+};
 
-export default Shoppingpage
+export default Shoppingpage;
